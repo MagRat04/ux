@@ -32,6 +32,8 @@ $black: #000;
 body {
   font-family: "Open Sans", sans-serif;
   background-color: $lightGray;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 .card {
   box-sizing: border-box;
