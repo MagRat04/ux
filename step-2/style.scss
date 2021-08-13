@@ -1,0 +1,88 @@
+@mixin tablet {
+  @media (min-width: 600px) {
+    @content;
+  }
+}
+@mixin tablet-landscape {
+  @media (min-width: 900px) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+@mixin large-desktop {
+  @media (min-width: 1800px) {
+    @content;
+  }
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("/fonts/OpenSans-Regular-webfont.woff2") format("woff2");
+}
+
+$blue: #006eff;
+$lightGray: #f0f0f0;
+$white: #fff;
+$black: #000;
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: $lightGray;
+}
+.card {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0.75rem;
+  padding: 1rem;
+  background-color: $white;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.2);
+}
+.card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  img {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+  }
+}
+.card__actions {
+  a {
+    color: $blue;
+    text-decoration: none;
+  }
+  .button__icon {
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+    margin-right: 0.25em;
+  }
+}
+
+.card__tag {
+  display: inline-block;
+  border: 1px solid $black;
+  border-radius: 10px;
+  padding: 0.25em;
+}
+
+@include tablet {
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .cell {
+    width: calc(50% - 2rem);
+  }
+}
+@include tablet-landscape {
+  .cell {
+    width: calc(32% - 2rem);
+  }
+}
