@@ -3,31 +3,32 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import User from "./components/User";
 import UserDetails from "./components/UserDetails";
+import { getUsers } from "./api/api";
 
 function App() {
   const [users, setUsers] = React.useState(undefined);
   React.useEffect(() => {
-    const getUsers = async () => {
-      return await fetch("https://reqres.in/api/users/");
-    };
-
-    getUsers()
-      .then((response) => response.json())
-      .then((json) => setUsers(json));
+    async function getAllUsers() {
+      const allUsers = await getUsers();
+      const userData = await allUsers.json();
+      setUsers(userData);
+    }
+    getAllUsers();
   }, []);
-  console.log(users);
 
   return (
     <Router>
       <div className="App">
-        <h1>Users App</h1>
         <Switch>
           <Route path="/" exact>
             {users && (
               <>
-                {users.data.map((user, index) => {
-                  return <User user={{ user }} key={index} />;
-                })}
+                <h1>Users App</h1>
+                <div className="grid">
+                  {users.data.map((user, index) => {
+                    return <User data={user} key={index} />;
+                  })}
+                </div>
               </>
             )}
           </Route>
