@@ -23,7 +23,7 @@ function App() {
           <Route path="/" exact>
             {users && (
               <>
-                <h1>Users App</h1>
+                <h1 id="appTitle">Users App</h1>
                 <div className="grid">
                   {users.data.map((user, index) => {
                     return <User data={user} key={index} />;
