@@ -1,15 +1,19 @@
 # ux
 
-# Getting Started with Create React App
+# Step-1
+Navigate to the step-1 folder and open the card.html file in your browser.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Step-2
+Navigate to the step-2 folder and open the index.html file in your browser.
 
-## Available Scripts
+# Step-3
+Open up a terminal console and navigate to the Step-3 folder in the UX project directory. 
+Run ### `npm-install`
 
-In the project directory, you can run:
-
+Once the install has completed run:
 ### `npm start`
 
+## Other Available Scripts are:
 Navigate to the step-3 folder cd step-3
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
