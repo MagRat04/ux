@@ -7,8 +7,8 @@ Navigate to the step-1 folder and open the card.html file in your browser.
 Navigate to the step-2 folder and open the index.html file in your browser.
 
 # Step-3
-Open up a terminal console and navigate to the Step-3 folder in the UX project directory. 
-Run ### `npm-install`
+Open up a terminal console and navigate to the Step-3 folder in the UX project directory and run the following. 
+### `npm-install`
 
 Once the install has completed run:
 ### `npm start`
