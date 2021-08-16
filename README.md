@@ -13,15 +13,9 @@ Open up a terminal console and navigate to the Step-3 folder in the UX project d
 Once the install has completed run:
 ### `npm start`
 
+The project shoudl launch in your default browser. If it does not you can open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
 ## Other Available Scripts are:
-Navigate to the step-3 folder cd step-3
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-NOTE: When navigating to User Details pages the browser back button will take you back to the full user list.
 
 ### `npm test`
 
